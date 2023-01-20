@@ -1,22 +1,22 @@
 ---
-- name: Install and configure Apache2
+- name: Installation and configuration Apache2 avec modification de la page index.html
   hosts: serverweb
   become: true
   tasks:
-    - name: Install Apache2
+    - name: Installation Apache2
       apt:
         name: apache2
         state: present
 
-- name: Install and configure Apache2
+- name: Installation and configuration Apache2
   hosts: serverweb
   become: true
   tasks:
-    - name: Install Apache2
+    - name: Installation Apache2
       apt:
         name: apache2
         state: present
-    - name: Create custom index page
+    - name: Creation de la page index
       copy:
         content:  <html>
           <head>
@@ -28,7 +28,7 @@
           </body>
           </html>
         dest: /var/www/html/index.html
-    - name: Start Apache2 service
+    - name: Demarage du service Apache2
       service:
         name: apache2
         state: started
