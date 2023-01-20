@@ -1,0 +1,19 @@
+- name: Deploy web app
+  hosts: all
+  become: true
+  
+  tasks:
+  - name: Install Apache web server
+    package:
+      name: httpd
+      state: present
+      
+  - name: Copy web app files
+    copy:
+      src: "{{ play_dir }}/files/app"
+      dest: "/var/www/html"
+      
+  - name: Start Apache web server
+    service:
+      name: httpd
+      state: started
