@@ -8,3 +8,19 @@
         name: apache2
         state: present
 
+- name: Install and configure Apache2
+  hosts: serverweb
+  become: true
+  tasks:
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
+    - name: Create custom index page
+      copy:
+        content: "Bienvenue sur notre site web personnalisé!"
+        dest: /var/www/html/index.html
+    - name: Start Apache2 service
+      service:
+        name: apache2
+        state: started
