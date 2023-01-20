@@ -1,5 +1,5 @@
 - name: Deploy web app
-  hosts: all
+  hosts: serverweb
   become: true
   
   tasks:
