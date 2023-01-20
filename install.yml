@@ -1,5 +1,5 @@
 - name: Deploy web app
-  hosts: MachineDebian
+  hosts: all
   become: true
   
   tasks:
