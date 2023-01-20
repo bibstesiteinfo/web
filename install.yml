@@ -1,6 +1,6 @@
 ---
 - name: Install and configure Apache2
-  hosts: all
+  hosts: serverweb
   become: true
   tasks:
     - name: Install Apache2
