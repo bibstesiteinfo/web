@@ -18,7 +18,15 @@
         state: present
     - name: Create custom index page
       copy:
-        content: "Bienvenue sur le Site informatique"
+        content:  <html>
+          <head>
+            <title>Welcome to our custom website</title>
+          </head>
+          <body>
+            <h1>Bienvenue sur le Site informatique</h1>
+            <p>Nous espérons que vous apprécierez votre visite.</p>
+          </body>
+          </html>
         dest: /var/www/html/index.html
     - name: Start Apache2 service
       service:
