@@ -24,7 +24,7 @@
           </head>
           <body>
             <h1>Bienvenue sur le Site informatique</h1>
-            <p>Nous espérons que vous apprécierez votre visite.</p>
+            <p>Nous esperons que vous apprecierez votre visite.</p>
           </body>
           </html>
         dest: /var/www/html/index.html
