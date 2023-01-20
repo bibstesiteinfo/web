@@ -1,4 +1,5 @@
-         - name: Install and configure Apache2
+---
+- name: Install and configure Apache2
   hosts: all
   become: true
   tasks:
